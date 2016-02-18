@@ -43,7 +43,7 @@ gem "autoprefixer-rails"
 
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-plugin'
+  # gem 'rails-assets-plugin'
 end
 
 

@@ -1,0 +1,21 @@
+<h1>Ceci est la liste des cocktails!</h1>
+
+<table class="table">
+<% @cocktails.each do |c| %>
+<tr>
+<td>
+  <p><%= c.name %></p>
+  <% c.doses.each do |d| %>
+  <p><%= d.ingredient.name + ' : ' + d.description %></p>
+  <p><%= link_to "Modifier une dose", edit_cocktail_dose_path(c.id, d.id) %></p>
+
+  <% end %>
+</td>
+<td>
+  <%= link_to "Ajouter une dose", new_cocktail_dose_path(c.id) %>
+</td>
+</tr>
+<% end %>
+</table>
+
+
